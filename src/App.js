@@ -6,16 +6,34 @@ import Rank from './components/Rank/Rank';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
 import './App.css';
 
-function App() {
-  return (
-    <div className='App'>
-      <Particles />
-      <Navigation />
-      <Logo />
-      <Rank />
-      <ImageLinkForm />
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      input: '',
+    };
+  }
+  onUrlInputChange = (event) => {
+    console.log(event.target.value);
+  };
+
+  onDetectSummit = () => {
+    console.log('click');
+  };
+  render() {
+    return (
+      <div className='App'>
+        <Particles />
+        <Navigation />
+        <Logo />
+        <Rank />
+        <ImageLinkForm
+          onUrlInputChange={this.onUrlInputChange}
+          onDetectSummit={this.onDetectSummit}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
