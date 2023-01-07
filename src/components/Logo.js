@@ -1,6 +1,6 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
-import Starslogo from '../../asset/stars.gif';
+import Starslogo from '../asset/stars.gif';
 import './Logo.css';
 
 const Logo = () => {
