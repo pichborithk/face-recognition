@@ -1,6 +1,6 @@
 import React from 'react';
 import Clarifai from 'clarifai';
-import Particles from '../components/Particles';
+import ParticlesBg from '../components/ParticlesBg';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 import Rank from '../components/Rank';
@@ -41,7 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <Particles />
+        <ParticlesBg />
         <Navigation />
         <Logo />
         <Rank />
